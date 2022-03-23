@@ -188,6 +188,24 @@ media queries labtop
     header{
         background-position: 50% 50%;
     }
+    .flex_aside{
+        display: flex;
+        flex-direction: row-reverse;
+
+
+    }
+    .something{
+        padding: 30px ;
+       margin:10px 5px;
+       
+       
+    }
+    .something p{
+        margin:10px 0px;
+    }
+    .articles{
+        margin:10px 5px;
+    }
     .menu{
         padding: 10px 5px 40px;
     }
