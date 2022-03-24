@@ -22,7 +22,9 @@ header{
     width: 10%;
     margin: auto;
     display: block;
+    
 }
+.rotate-center{animation:rotate-center .6s ease-in-out both}
 .seleccion{
     display: flex;
     align-items: center;
@@ -38,7 +40,6 @@ header{
     font-size: 12px;
 }
 .menu a:hover{
-    /* border: 4px solid ; */
     background-color: rgba(0,0,0,0.1);
     color:rgba(0,0,0,0.8);
     border-radius: 12px;
@@ -65,6 +66,8 @@ i{
     transition: 0.5s;
     text-shadow: 1px 1px rgba(0,0,0,0.2); 
 }
+.tracking-in-expand{animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,2.000) both}
+
 /* pagina principal */
 
 main{
@@ -152,11 +155,12 @@ media queries Tablet
         align-items: center;
         padding: 10px 5px 70px;
     }
+    .menu a{
+        font-size: 16px;
+        margin-right: 8px;
+    }
     #logo{
         margin:0;
-    }
-    .sel_m{
-        margin:0px 10px;
     }
     .social{
         display: initial;
@@ -164,15 +168,17 @@ media queries Tablet
     .titulo{
         padding: 20px 0px 30px;
         font-size: 17px;
+
+        overflow: hidden;
     }
     /* pagina principal*/
+
     .flex{
         display: flex;
         justify-content: space-around;
         margin: 0px 5px;
     }
     .config_art{
-        /* flex-basis: 100%; */
         flex-wrap: wrap;
         margin: 5px;
     }
@@ -188,17 +194,20 @@ media queries labtop
     header{
         background-position: 50% 50%;
     }
+    .seleccion a{
+        font-size: 16px;
+        margin-right: 16px;
+    }
+    .sel_m{
+        font-size: 30px;
+    }
     .flex_aside{
         display: flex;
         flex-direction: row-reverse;
-
-
     }
     .something{
         padding: 30px ;
        margin:10px 5px;
-       
-       
     }
     .something p{
         margin:10px 0px;
@@ -210,3 +219,14 @@ media queries labtop
         padding: 10px 5px 40px;
     }
 }
+
+
+/* -------------------------------------------------------------
+keyframes
+------------------------------------------------------------- */
+
+/* logo  */
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+/* titulo  */
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
